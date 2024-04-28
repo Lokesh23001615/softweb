@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column; /* Added */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Changed */
+            width: 100%;
+            background: url('https://i.pinimg.com/originals/09/05/a7/0905a74092fa43fce6218aa48f6a26a4.jpg') no-repeat;
+            background-size: cover;
+            background-color: #66fcf1;
+            position: relative;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .navigation a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .company-name {
+            color: #fff;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .login-signup {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .login-signup button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #000;
+            color: #66fcf1;
+            border: 1px solid #66fcf1;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .login-signup button:hover {
+            background-color: #66fcf1;
+            color: #000;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .product {
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Changed */
+            border: 2px solid #fff; /* Added */
+            border-radius: 10px; /* Added */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Added */
+            text-align: center;
+            width: 300px;
+            transition: all 0.3s ease; /* Added */
+        }
+
+        .product img {
+            width: 200px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #fff; /* Added */
+        }
+
+        .product p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #fff; /* Added */
+        }
+
+        .product:hover {
+            transform: translateY(-5px); /* Added */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Added */
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="navigation">
+        <a href="soft.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="people.html">People</a>
+        <a href="products.html">Contact</a>
+    </div>
+    <div class="company-name">ByteGenius Labs</div>
+    <div class="login-signup">
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+        <a href="signup.html">
+            <button>Sign Up</button>
+        </a>
+    </div>
+    <div class="products">
+        <div class="product">
+            <img src="Custom-Software-Development-2.webp" alt="Product 1">
+            <h3>Custom Software Solutions</h3>
+            <p>Transform your business with our custom software solutions tailored to your specific needs.</p>
+        </div>
+        <div class="product">
+            <img src="original-e27f0aac220fbd4b94855ce9252a9a8d.png" alt="Product 2">
+            <h3>Mobile Applications</h3>
+            <p>Explore our innovative mobile applications designed to enhance user experience and engagement.</p>
+        </div>
+        <div class="product">
+            <img src="original-41e8c46ebd8a5b5dc3a76dc0bb33e11f.jpg" alt="Product 3">
+            <h3>Web Applications</h3>
+            <p>Discover our web-based applications and platforms built for efficiency and scalability.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

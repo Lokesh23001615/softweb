@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        :root {
+            --black-color: #fff;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background: url('https://i.pinimg.com/originals/09/05/a7/0905a74092fa43fce6218aa48f6a26a4.jpg') no-repeat;
+            background-size: cover;
+            background-color: #66fcf1;
+            animation: animateBg 4s linear infinite;
+            position: relative; /* Added */
+        }
+
+        @keyframes animateBg {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .content {
+            text-align: center;
+            color: var(--black-color);
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #000;
+            color: #66fcf1;
+            border: 1px solid #66fcf1;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #66fcf1;
+            color: #000;
+        }
+
+        .navigation {
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .navigation a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 1.5em;
+            margin-right: 20px;
+        }
+
+        .login-signup {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .login-signup button {
+            margin-right: 10px; /* Added */
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content">
+        <h1>Welcome to Our ByteGenius Labs</h1>
+        <p>Explore our innovative solutions and services to transform your business.</p>
+        <a href="#" class="btn" id="getStartedBtn">Get Started</a>
+    </div>
+</div>
+<div class="navigation" id="navigation">
+    <div class="logo">ByteGenius Labs</div>
+    <a href="#">Home</a>
+    <a href="products.html">Products</a>
+    <a href="people.html">People</a>
+    <a href="contact.html">Contact</a>
+</div>
+<div class="login-signup" id="loginSignup">
+    <a href="login.html">
+    <button class="btn">Login</button>
+    </a>
+    <a href="signup.html">
+    <button class="btn">Sign Up</button>
+    </a>
+</div>
+<script>
+    document.getElementById('getStartedBtn').addEventListener('click', function() {
+        var navigation = document.getElementById('navigation');
+        var loginSignup = document.getElementById('loginSignup');
+        if (navigation.style.display === 'none') {
+            navigation.style.display = 'flex';
+            loginSignup.style.display = 'flex';
+        } else {
+            navigation.style.display = 'none';
+            loginSignup.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peoples</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background: url('https://i.pinimg.com/originals/09/05/a7/0905a74092fa43fce6218aa48f6a26a4.jpg') no-repeat;
+            background-size: cover;
+            background-color: #66fcf1;
+            position: relative;
+            padding: 20px; /* Added */
+        }
+
+        .navigation {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+        }
+
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .navigation a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .company-name {
+            color: #fff;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .login-signup {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .login-signup button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #000;
+            color: #66fcf1;
+            border: 1px solid #66fcf1;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .login-signup button:hover {
+            background-color: #66fcf1;
+            color: #000;
+        }
+
+        .people {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .person {
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .person img {
+            width: 200px;
+            height: 200px; /* Added */
+            border-radius: 50%; /* Added */
+            margin-bottom: 10px;
+        }
+
+        .person h3 {
+            font-size: 1.5em; /* Increased */
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .person p {
+            font-size: 1em;
+            line-height: 1.5;
+            color: #fff;
+        }
+
+        .person:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="navigation">
+        <a href="soft.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="people.html">People</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="company-name">ByteGenius Labs</div>
+    <div class="login-signup">
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+        <a href="signup.html">
+            <button>Sign Up</button>
+        </a>
+    </div>
+    <div class="people">
+        <div class="person">
+            <img src="WhatsApp Image 2024-04-22 at 18.54.16_78b52369.jpg" alt="CEO">
+            <h3>Lokesh</h3>
+            <p>CEO</p>
+        </div>
+        <div class="person">
+            <img src="cofounder.jpg" alt="Co-founder">
+            <h3>Jane Smith</h3>
+            <p>Co-founder</p>
+        </div>
+        <div class="person">
+            <img src="director.jpg" alt="Director">
+            <h3>Michael Johnson</h3>
+            <p>Director</p>
+        </div>
+        <div class="person">
+            <img src="Assistant Director.jpg" alt="Assistant Director">
+            <h3>Emily Brown</h3>
+            <p>Assistant Director</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
