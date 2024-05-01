@@ -27,11 +27,14 @@
             position: relative;
         }
 
-        .navigation {
+        .navigation, .login-signup {
+            display: none;
             position: absolute;
             top: 20px;
-            left: 20px;
             z-index: 999;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .navigation a {
@@ -47,6 +50,7 @@
         .navigation a:hover {
             background-color: rgba(255, 255, 255, 0.3);
         }
+
 
         .company-name {
             color: #fff;
@@ -78,7 +82,7 @@
             text-align: center;
             width: 300px;
             transition: all 0.3s ease;
-            animation: fadeInUp 1s forwards; /* Added animation */
+            animation: fadeInUp 1s forwards;
         }
 
         @keyframes fadeInUp {
@@ -94,7 +98,7 @@
 
         .contact-form input,
         .contact-form textarea {
-            width: calc(100% - 22px); /* Adjusted width to account for padding */
+            width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
@@ -115,7 +119,7 @@
         }
 
         .contact-form button {
-            width: 100%; /* Added width */
+            width: 100%;
             padding: 10px 20px;
             font-size: 1em;
             background-color: #000;
@@ -156,6 +160,17 @@
             background-color: #66fcf1;
             color: #000;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
     </style>
 </head>
 <body>
@@ -170,7 +185,7 @@
     <div class="contact-info">
         <p><span class="icon">📧</span>Email: info@bytegeniuslabs.com</p>
         <p><span class="icon">☎️</span>Phone: +1 (123) 456-7890</p>
-        <h1> Contact us </h1>
+        <h1>Contact us</h1>
     </div>
     <div class="login-signup">
         <a href="login.html">
@@ -186,4 +201,12 @@
             <input type="text" name="name" placeholder="Your Name">
             <input type="email" name="email" placeholder="Your Email">
             <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-            <button type="
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<footer>
+    &copy; 2024 ByteGenius Labs. All rights reserved.
+</footer>
+</body>
+</html>

@@ -70,11 +70,10 @@
             color: #000;
         }
 
-        .navigation {
+        .navigation, .login-signup {
             display: none;
             position: absolute;
             top: 20px;
-            left: 20px;
             z-index: 999;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 10px;
@@ -102,7 +101,6 @@
         }
 
         .login-signup {
-            display: none;
             position: absolute;
             top: 20px;
             right: 20px;
@@ -110,6 +108,16 @@
 
         .login-signup button {
             margin-right: 10px; /* Added */
+        }
+
+        /* Checkbox Hack */
+        #toggleNav {
+            display: none;
+        }
+
+        #toggleNav:checked + .wrapper .navigation,
+        #toggleNav:checked + .wrapper .login-signup {
+            display: flex;
         }
 
         @media (max-width: 768px) {
@@ -121,43 +129,46 @@
                 font-size: 1em;
             }
         }
+
+      
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
     </style>
 </head>
 <body>
+<input type="checkbox" id="toggleNav">
 <div class="wrapper">
     <div class="content">
         <h1>Welcome to Our ByteGenius Labs</h1>
         <p>Explore our innovative solutions and services to transform your business.</p>
-        <a href="#" class="btn" id="getStartedBtn">Get Started</a>
+        <label for="toggleNav" class="btn">Get Started</label>
+    </div>
+    <div class="navigation">
+        <div class="logo">ByteGenius Labs</div>
+        <a href="#">Home</a>
+        <a href="products.html">Products</a>
+        <a href="people.html">People</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="login-signup">
+        <a href="login.html">
+            <button class="btn">Login</button>
+        </a>
+        <a href="signup.html">
+            <button class="btn">Sign Up</button>
+        </a>
     </div>
 </div>
-<div class="navigation" id="navigation">
-    <div class="logo">ByteGenius Labs</div>
-    <a href="#">Home</a>
-    <a href="products.html">Products</a>
-    <a href="people.html">People</a>
-    <a href="contact.html">Contact</a>
-</div>
-<div class="login-signup" id="loginSignup">
-    <a href="login.html">
-    <button class="btn">Login</button>
-    </a>
-    <a href="signup.html">
-    <button class="btn">Sign Up</button>
-    </a>
-</div>
-<script>
-    document.getElementById('getStartedBtn').addEventListener('click', function() {
-        var navigation = document.getElementById('navigation');
-        var loginSignup = document.getElementById('loginSignup');
-        if (navigation.style.display === 'none') {
-            navigation.style.display = 'flex';
-            loginSignup.style.display = 'flex';
-        } else {
-            navigation.style.display = 'none';
-            loginSignup.style.display = 'none';
-        }
-    });
-</script>
+<footer>
+    &copy; 2024 ByteGenius Labs. All rights reserved.
+</footer>
 </body>
 </html>

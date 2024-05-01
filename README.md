@@ -1,5 +1,5 @@
 # Ex.07 Software Product Company Website
-## Date:
+## Date:28.04.2024
 
 ## AIM:
 To develop a static company website to display the softwares and services provided by the company.
@@ -102,11 +102,10 @@ Publish the website in the given URL.
             color: #000;
         }
 
-        .navigation {
+        .navigation, .login-signup {
             display: none;
             position: absolute;
             top: 20px;
-            left: 20px;
             z-index: 999;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 10px;
@@ -134,7 +133,6 @@ Publish the website in the given URL.
         }
 
         .login-signup {
-            display: none;
             position: absolute;
             top: 20px;
             right: 20px;
@@ -142,6 +140,16 @@ Publish the website in the given URL.
 
         .login-signup button {
             margin-right: 10px; /* Added */
+        }
+
+        /* Checkbox Hack */
+        #toggleNav {
+            display: none;
+        }
+
+        #toggleNav:checked + .wrapper .navigation,
+        #toggleNav:checked + .wrapper .login-signup {
+            display: flex;
         }
 
         @media (max-width: 768px) {
@@ -153,44 +161,47 @@ Publish the website in the given URL.
                 font-size: 1em;
             }
         }
+
+      
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
     </style>
 </head>
 <body>
+<input type="checkbox" id="toggleNav">
 <div class="wrapper">
     <div class="content">
         <h1>Welcome to Our ByteGenius Labs</h1>
         <p>Explore our innovative solutions and services to transform your business.</p>
-        <a href="#" class="btn" id="getStartedBtn">Get Started</a>
+        <label for="toggleNav" class="btn">Get Started</label>
+    </div>
+    <div class="navigation">
+        <div class="logo">ByteGenius Labs</div>
+        <a href="#">Home</a>
+        <a href="products.html">Products</a>
+        <a href="people.html">People</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="login-signup">
+        <a href="login.html">
+            <button class="btn">Login</button>
+        </a>
+        <a href="signup.html">
+            <button class="btn">Sign Up</button>
+        </a>
     </div>
 </div>
-<div class="navigation" id="navigation">
-    <div class="logo">ByteGenius Labs</div>
-    <a href="#">Home</a>
-    <a href="products.html">Products</a>
-    <a href="people.html">People</a>
-    <a href="contact.html">Contact</a>
-</div>
-<div class="login-signup" id="loginSignup">
-    <a href="login.html">
-    <button class="btn">Login</button>
-    </a>
-    <a href="signup.html">
-    <button class="btn">Sign Up</button>
-    </a>
-</div>
-<script>
-    document.getElementById('getStartedBtn').addEventListener('click', function() {
-        var navigation = document.getElementById('navigation');
-        var loginSignup = document.getElementById('loginSignup');
-        if (navigation.style.display === 'none') {
-            navigation.style.display = 'flex';
-            loginSignup.style.display = 'flex';
-        } else {
-            navigation.style.display = 'none';
-            loginSignup.style.display = 'none';
-        }
-    });
-</script>
+<footer>
+    &copy; 2024 ByteGenius Labs. All rights reserved.
+</footer>
 </body>
 </html>
 
@@ -341,6 +352,16 @@ button {
     width:290px;
   }
 }
+footer{
+
+           position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+}
 
 
 
@@ -384,12 +405,15 @@ button {
         </div>
       
       </div>
+      <footer>
+        &copy; 2024 ByteGenius Labs. All rights reserved.
+      </footer>
 </body>
 </html>
 ```
 ## signup.html
 ```
-<!DOCTYPE html>
+<!D<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -552,6 +576,15 @@ button {
                 width: 290px;
             }
         }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -596,6 +629,10 @@ button {
         </form>
     </div>
 </div>
+<footer>
+    
+    &copy; 2024 ByteGenius Labs. All rights reserved.
+</footer>
 </body>
 </html>
 
@@ -723,6 +760,17 @@ button {
             transform: translateY(-5px); /* Added */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Added */
         }
+        footer{
+
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
     </style>
 </head>
 <body>
@@ -759,7 +807,11 @@ button {
             <p>Discover our web-based applications and platforms built for efficiency and scalability.</p>
         </div>
     </div>
+
 </div>
+<footer>
+    &copy; 2024 ByteGenius Labs. All rights reserved.
+</footer>
 </body>
 </html>
 
@@ -889,6 +941,16 @@ button {
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
+        footer{
+
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -931,8 +993,12 @@ button {
         </div>
     </div>
 </div>
+<footer>
+    &copy; 2024 ByteGenius Labs. All rights reserved.
+</footer>
 </body>
 </html>
+
 
 ```
 ## contact.html
@@ -966,11 +1032,14 @@ button {
             position: relative;
         }
 
-        .navigation {
+        .navigation, .login-signup {
+            display: none;
             position: absolute;
             top: 20px;
-            left: 20px;
             z-index: 999;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .navigation a {
@@ -986,6 +1055,7 @@ button {
         .navigation a:hover {
             background-color: rgba(255, 255, 255, 0.3);
         }
+
 
         .company-name {
             color: #fff;
@@ -1017,7 +1087,7 @@ button {
             text-align: center;
             width: 300px;
             transition: all 0.3s ease;
-            animation: fadeInUp 1s forwards; /* Added animation */
+            animation: fadeInUp 1s forwards;
         }
 
         @keyframes fadeInUp {
@@ -1033,7 +1103,7 @@ button {
 
         .contact-form input,
         .contact-form textarea {
-            width: calc(100% - 22px); /* Adjusted width to account for padding */
+            width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
@@ -1054,7 +1124,7 @@ button {
         }
 
         .contact-form button {
-            width: 100%; /* Added width */
+            width: 100%;
             padding: 10px 20px;
             font-size: 1em;
             background-color: #000;
@@ -1095,6 +1165,17 @@ button {
             background-color: #66fcf1;
             color: #000;
         }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
     </style>
 </head>
 <body>
@@ -1109,7 +1190,7 @@ button {
     <div class="contact-info">
         <p><span class="icon">📧</span>Email: info@bytegeniuslabs.com</p>
         <p><span class="icon">☎️</span>Phone: +1 (123) 456-7890</p>
-        <h1> Contact us </h1>
+        <h1>Contact us</h1>
     </div>
     <div class="login-signup">
         <a href="login.html">
@@ -1125,22 +1206,29 @@ button {
             <input type="text" name="name" placeholder="Your Name">
             <input type="email" name="email" placeholder="Your Email">
             <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-            <button type="
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<footer>
+    &copy; 2024 ByteGenius Labs. All rights reserved.
+</footer>
+</body>
+</html>
+
 
 ```
 ## OUTPUT:
-![alt text](<loki/softapp/static/getstarted out.png>)
-
 ![alt text](loki/softapp/static/homeout.png)
 
 ![alt text](loki/softapp/static/loginout.png)
 
 ![alt text](loki/softapp/static/signupout.png)
 
-![alt text](loki/softapp/static/productsout.png)
+![text](loki/softapp/static/productsout.png)
 
-![alt text](loki/softapp/static/peoplesout.png)
+![alt text](loki/softapp/static/peopleout.png)
 
-![alt text](loki/softapp/static/contactout.png)
+![alt text](loki/softapp/static/contanctout.png)
 ## RESULT:
 The program for designing software company website using HTML and CSS is completed successfully.
